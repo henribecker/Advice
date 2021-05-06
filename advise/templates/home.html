@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <title>Advice</title>
+</head>
+<body>
+    <section>
+        <!--Menu top -->
+        <header>
+            <a href="{% url 'Home' %}" class="logo">Advice</a>
+            <ul class="navigation">
+                <li><a href="{% url 'Home' %}" class="active">Home</a></li>
+            </ul>
+        </header>
+        <!-- Page -->
+        <div class="content">
+            <div class="textBox">
+                <h2>Can I give you an advice?</h2>
+                <p class="adiver">{{ call }}</p>
+                <a href="{% url 'Advice' %}">Generate advice</a>
+            </div>
+        </div>
+
+        <!--Media Social-->
+        <div class="sci">
+            <li><a href="#"><img src="{% static 'img/1.png' %}" alt="Facebook"></a></li>
+            <li><a href="#"><img src="{% static 'img/2.png' %}" alt="Linkedin"></a></li>
+            <li><a href="#"><img src="{% static 'img/5.png' %}" alt="Instagram"></a></li>
+        </div>
+    </section>
+</body>
+</html>
