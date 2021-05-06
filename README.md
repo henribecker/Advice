@@ -1,4 +1,4 @@
-# startup1
+# ADVICE PROJECT
 PRIMEIRO PROJETO INDO PARA PRODUÇÃO
 
 Esse é um projeto básico, que faz o uso de uma API pública que gera conselhos aleatoriamente.
