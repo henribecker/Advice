@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en-us">
@@ -5,25 +6,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
-    <title>Advice</title>
+    {% block css %}<link rel="stylesheet" href="{% static 'css/style.css' %}">{% endblock css %}
+    {% block favicon %}<link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">{% endblock favicon %}
+    {% block titulo %}Adice{% endblock titulo %}
 </head>
 <body>
     <section>
         <!--Menu top -->
         <header>
-            <a href="{% url 'Home' %}" class="logo">Advice</a>
+            <a href="{% url 'Index' %}" class="logo">Advice</a>
             <ul class="navigation">
-                <li><a href="{% url 'Home' %}" class="active">Home</a></li>
+                <li><a href="{% url 'Index' %}" class="active">Home</a></li>
             </ul>
         </header>
         <!-- Page -->
         <div class="content">
             <div class="textBox">
                 <h2>Can I give you an advice?</h2>
-                <p class="adiver">{{ call }}</p>
-                <a href="{% url 'Advice' %}">Generate advice</a>
+                <p class="adiver">{% block advice %} {{ call }} {% endblock advice %}</p>
+                <a href="{% block aadvice %} {% url 'Advice' %} {% endblock aadvice %}">Generate advice</a>
             </div>
         </div>
 

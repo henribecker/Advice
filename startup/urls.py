@@ -21,6 +21,7 @@ from django.shortcuts import redirect
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', index, name='Index'),
     path('', include('advise.urls')),
 
 ]

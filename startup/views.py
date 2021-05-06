@@ -4,6 +4,10 @@ from django.shortcuts import redirect
 
 
 
-def redirection(request):
+def index(request):
 
-    return redirect
+    context = {
+        "first": 'Welcome to my advice'
+    }
+
+    return render(request, 'base.html', context)
