@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% block css %} <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% endblock css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block css %} 
+    {% endblock css %}
     {% block favicon %} <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon"> {% endblock favicon %}
     <title>{% block titulo %}Advice{% endblock titulo %}</title>
 </head>
@@ -13,17 +15,19 @@
     <section>
         <!--Menu top -->
         <header>
-            <a href="{% url 'Index' %}" class="logo">Advice</a>
+            <a href="{% url 'Index' %}" class="logo">{% block logo %}Advice{% endblock logo %}</a>
             <ul class="navigation">
-                <li><a href="{% url 'Index' %}" class="active">Home</a></li>
+                <li><a href="{% block urlmenu %} {% url 'Dolar' %} {% endblock urlmenu %}" class="active">{% block menu %}Cotação{% endblock menu %}</a></li>
             </ul>
         </header>
         <!-- Page -->
         <div class="content">
             <div class="textBox">
-                <h2>Can I give you an advice?</h2>
+                {% block center %}
+                <h2>{% block h2 %}Can I give you an advice?{% endblock h2 %}</h2>
                 <p class="adiver">{% block advice %}{{ first }}{% endblock advice %}</p>
-                <a href="{% block url %}{% url 'Advice' %}{% endblock url %}">Generate advice</a>
+                <a href="{% block url %}{% url 'Advice' %}{% endblock url %}">{% block btn %}Generate advice{% endblock btn %}</a>
+                {% endblock center %}
             </div>
         </div>
 

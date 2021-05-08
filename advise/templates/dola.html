@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %} 
+<link rel="stylesheet" href="{% static 'css/dolar.css' %}"> 
+{% endblock css %}
+
+{% block titulo %}
+Cotação | Moeda
+{% endblock titulo %}
+
+{% block logo %}
+Cotação
+{% endblock logo %}
+
+{% block urlmenu %} {% url 'Advice' %} {% endblock urlmenu %}
+
+{% block menu %} Advice {% endblock menu %}
+
+{% block center %}
+<div class="cotacao">
+    <span class="cotDolar">
+        <span class="simbolo">US$</span>
+        <input type="text" class="real" value="1,00">
+    </span>
+    <span class="cotDolar">
+        <span class="simbolo">R$</span>
+        <input type="text" class="real" value="5,23">
+    </span>
+</div>
+{% endblock center %}

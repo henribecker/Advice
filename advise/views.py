@@ -10,3 +10,8 @@ def advice(request):
     }
     
     return render(request, 'home.html', advices)
+
+
+def dolar(request):
+
+    return render(request, 'dola.html')
