@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .api import get
-
+from .dolar import dolarget
 # Create your views here.
 
 def advice(request):
@@ -16,9 +16,10 @@ def advice(request):
 def dolar(request):
 
     cot = dolarget()
+    preco = float(cot[0])
 
     context = {
-        "dolarhoje" : cot[0],
+        "dolarhoje" : cot[0][:4],
         "high": cot[1],
         "low": cot[2],
     }

@@ -1,0 +1,54 @@
+section{
+    background: url(../img/dolar.png);
+}
+.content {
+    margin: auto;
+}
+header .logo {
+    color: #000;
+}
+
+.cotacao {
+    display: flex;
+    width: 600px;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cotacao .cotDolar {
+    margin-left: 50px;
+    position: relative;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.cotacao .cotDolar .simbolo {
+    display: flex;
+    font-size: 50px;
+    color: #000;
+
+}
+.cotacao .cotDolar .real {
+    margin-right: 10px;
+    width: 175px;
+    height: 75px;
+    font-size: 50px;
+}
+.cotacao .cotDolar .real:focus{
+    width: 300px;
+}
+
+.cotacao .cotDolar input[type="text"] {
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    border-radius: 15px;
+    text-align: right;
+}
+.cotacao .cotDolar input[type="text"]:focus {
+    background-color: rgba(0, 0, 0, 0.411);
+    color: #fff;
+}
