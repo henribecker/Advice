@@ -3,7 +3,9 @@ section{
 }
 .content {
     margin: auto;
-
+}
+header .logo {
+    color: #000;
 }
 
 .cotacao {

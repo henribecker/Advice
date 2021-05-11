@@ -1,6 +1,6 @@
 import requests, json
 
-def get():
+def dolarget():
     obj = requests.get('https://economia.awesomeapi.com.br/last/USD-BRL')
     print(obj.status_code)
     print(obj.text)
