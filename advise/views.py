@@ -1,21 +1,27 @@
 from django.shortcuts import render
-from .api import get
-from .dolar import dolarget
+from . import api
+
 # Create your views here.
 
 def advice(request):
-    call = get()
-
-    advices = {
-        "call": call,
-    }
-    
-    return render(request, 'home.html', advices)
+    call = api.get()
+    if call == False:
+        advices = {
+            "call": "SORRY! Indisponível no momento.",
+        }
+        
+        return render(request, 'home.html', advices)
+    else:
+        advices = {
+            "call": call,
+        }
+        
+        return render(request, 'home.html', advices)
 
 
 def dolar(request):
 
-    cot = dolarget()
+    cot = api.dolarget()
     preco = float(cot[0])
 
     context = {
