@@ -70,7 +70,6 @@ header ul li a:hover {
     color: #fff;
 }
 .content {
-    position: relative;
     width: 100%;
     margin: 0;
     justify-content: center;
@@ -78,7 +77,6 @@ header ul li a:hover {
 }
 .content .textBox {
     display: flex;
-    position: relative;
     width: 90%;
     margin: 0;
 }
