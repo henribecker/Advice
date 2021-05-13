@@ -1,8 +1,8 @@
 section{
     background: url(../img/dolar.png);
 }
-.content {
-    margin: auto;
+.content{
+    display: table;
 }
 header .logo {
     color: #000;
@@ -10,8 +10,9 @@ header .logo {
 
 .cotacao {
     display: flex;
-    width: 600px;
-    height: 600px;
+    width: 80%;
+    height: 80%;
+    box-sizing: border-box;
     justify-content: center;
     align-items: center;
     
@@ -52,12 +53,6 @@ header .logo {
     background-color: rgba(0, 0, 0, 0.411);
     color: #fff;
 }
-.cotacao .submit {
-    display: block;
-}
-.cotacao .submit .btn {
+.cotacao a {
     position: relative;
-    width: 40px;
-    height: 25px;
-    border: none;
 }
