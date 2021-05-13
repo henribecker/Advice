@@ -22,12 +22,21 @@ def advice(request):
 def dolar(request):
 
     cot = api.dolarget()
-    preco = float(cot[0])
-
-    context = {
+    if cot == False:
+        context = {
         "dolarhoje" : cot[0][:4],
         "high": cot[1],
         "low": cot[2],
-    }
+        }
 
-    return render(request, 'dola.html', context)
+        return render(request, 'dola.html', context)
+    else:
+        preco = float(cot[0])
+
+        context = {
+            "dolarhoje" : cot[0][:4],
+            "high": cot[1],
+            "low": cot[2],
+        }
+
+        return render(request, 'dola.html', context)
