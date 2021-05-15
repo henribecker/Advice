@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %} 
+<link rel="stylesheet" href="{% static 'css/coin.css' %}">
+{% endblock css %}
+
+{% block titulo %}
+Choice | Moeda
+{% endblock titulo %}
+
+{% block logo %}
+Cotação
+{% endblock logo %}
+
+{% block urlmenu %} {% url 'Advice' %} {% endblock urlmenu %}
+
+{% block menu %} Advice {% endblock menu %}
+
+{% block center %}
+<form action="" method="get">
+    {{ form }}
+    <input type="submit" value="Cotar">
+</form>
+{% endblock center %}
+
+{% block script %}
+
+{% endblock script %}

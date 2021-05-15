@@ -25,11 +25,14 @@ Cotação
     </span>
     <span class="cotDolar">
         <span class="simbolo">R$</span>
-        <input type="text" class="real" value="{{ dolarhoje }}">
+        <input type="text" class="real" value="{{ valor }}">
     </span>
-    <br>
-    <a href="#" class="btn btnsubmit" >Converter</a>
+    <div class="submit">
+        <a href="#" class="btn btnsubmit" >Converter</a>
+    </div>
 </div>
-
-
 {% endblock center %}
+
+{% block script %}
+    <script src="{% static 'js/script.js' %}"></script>
+{% endblock script %}

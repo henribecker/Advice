@@ -17,7 +17,7 @@
         <header>
             <a href="{% url 'Index' %}" class="logo">{% block logo %}Advice{% endblock logo %}</a>
             <ul class="navigation">
-                <li><a href="{% block urlmenu %} {% url 'Dolar' %} {% endblock urlmenu %}" class="active">{% block menu %}Cotação{% endblock menu %}</a></li>
+                <li><a href="{% block urlmenu %} {% url 'Choice' %} {% endblock urlmenu %}" class="active">{% block menu %}Cotação{% endblock menu %}</a></li>
             </ul>
         </header>
         <!-- Page -->
@@ -38,5 +38,10 @@
             <li><a href="#"><img src="{% static 'img/5.png' %}" alt="Instagram"></a></li>
         </div>
     </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    
+    {% block script %}
+    {% endblock script %}
 </body>
 </html>
