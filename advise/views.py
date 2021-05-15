@@ -31,13 +31,28 @@ def dolar(request, fisrt, second):
 
         return render(request, 'dola.html', context)
     else:
-        # preco = float(cot[0])
-
         context = {
             "valor" : cot[0][:4],
             "high": cot[1],
             "low": cot[2],
         }
+
+        preco = float(cot[0])
+        if len(cot[0].split('.')[0]) >= 2:
+            if len(cot[0].split('.')[0]) > 2:
+                cot1 = float(cot[0])
+                context["valor"]= f'{cot1:.2f}'
+            else:
+                context["valor"] = float(cot[0])
+        else:
+            if len(cot[0].split('.')[1]) > 1:
+                cot1 = float(cot[0])
+                context["valor"] = f'{cot1:.2f}'
+
+            else:
+                cot1 = float(cot[0])
+                context["valor"] = cot1
+        
 
         return render(request, 'dola.html', context)
 

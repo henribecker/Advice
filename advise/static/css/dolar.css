@@ -41,15 +41,15 @@ header .logo {
 }
 .cotacao .cotDolar .simbolo {
     display: flex;
-    font-size: 50px;
+    font-size: 40px;
     color: #000;
 
 }
 .cotacao .cotDolar .real {
     margin-right: 10px;
-    width: 175px;
+    width: 190px;
     height: 75px;
-    font-size: 50px;
+    font-size: 40px;
 }
 .cotacao .cotDolar .real:focus{
     width: 300px;

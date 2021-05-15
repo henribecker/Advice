@@ -18,7 +18,8 @@ def dolarget(fisrt, second):
     else:
         obj1 = json.loads(obj.text)
         for i in obj1.values():
-            a = [i['bid'], i['high'], i['low']]
+            a = [i['ask'], i['high'], i['low']]
+            print(a)
             return a
 
 choice = (
