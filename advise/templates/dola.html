@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block css %} 
-<link rel="stylesheet" href="{% static 'css/dolar.css' %}"> 
+<link rel="stylesheet" href="{% static 'css/style.css' %}"> 
 {% endblock css %}
 
 {% block titulo %}
@@ -18,6 +18,16 @@ Cotação
 {% block menu %} Advice {% endblock menu %}
 
 {% block center %}
+{% if cot == False %}
+<div class="content">
+    <div class="textBox">
+        <h2>Ops! Algo errado aconteceu.</h2>
+        <p class="adiver">{% block advice %} {{ valor }} {% endblock advice %}</p>
+        <a href="{% block url %} {% url 'Choice' %} {% endblock url %}">{% block btnName %}Voltar{% endblock btnName %}</a>
+    </div>
+</div>
+
+{% else %}
 <div class="cotacao">
     <span class="cotDolar">
         <span class="simbolo">US$</span>
@@ -29,8 +39,10 @@ Cotação
     </span>
     <div class="submit">
         <a href="#" class="btn btnsubmit" >Converter</a>
+        <a href=" {% url 'Choice' %} " class="btn btnsubmit" >Mudar Moedas</a>
     </div>
 </div>
+{% endif %}
 {% endblock center %}
 
 {% block script %}

@@ -28,6 +28,9 @@ form #id_coin_origin, #id_coin_destiny {
     margin-bottom: 10px;
     font-size: 1.2em;
     font-weight: 800;
+    overflow: hidden;
+    background-color: transparent;
+    
 }
 form input {
     margin-top: 10px;

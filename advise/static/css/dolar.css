@@ -46,10 +46,11 @@ header .logo {
 
 }
 .cotacao .cotDolar .real {
-    margin-right: 10px;
-    width: 190px;
+    
+    width: 200px;
     height: 75px;
     font-size: 40px;
+    pointer-events: painted;
 }
 .cotacao .cotDolar .real:focus{
     width: 300px;
@@ -58,7 +59,6 @@ header .logo {
 .cotacao .cotDolar input[type="text"] {
     border: none;
     outline: none;
-    padding-left: 10px;
     border-radius: 15px;
     text-align: right;
 }
@@ -70,7 +70,7 @@ header .logo {
     position: fixed;
     display: flex;
     /* margin-top: 250px; */
-    width: 50%;
+    width: 60%;
     height: 30%;
     justify-content: center;
     align-items: flex-end;
@@ -79,3 +79,51 @@ header .logo {
     margin-left: 20px;
 }
 
+@media (max-width: 991px)
+{
+    section {
+        padding: 100px 20px;
+        
+    }
+    header {
+        padding: 20px;
+    }
+    header .logo {
+        margin-left: 20px;
+    }
+    .navigation {
+        margin-left: 120px;
+    }
+    .content{
+        display: block;
+        height: 600px;
+        justify-content: center;
+        align-items: center;
+    }
+    .cotacao{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0 0 0;
+    
+    }
+    .cotacao .cotDolar{
+        display: block;
+        justify-content: center;
+        padding: 30px 0 0 100px;
+        box-sizing: border-box;
+        
+    }
+    .content .textBox .cotacao .submit {
+        position: relative;
+        align-items: end;
+        justify-content: space-between;
+        width: auto;
+        height: auto;
+        
+    }
+    .sci {
+        margin-bottom: 30px;
+    }
+
+}

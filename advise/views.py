@@ -24,9 +24,8 @@ def dolar(request, fisrt, second):
     cot = api.dolarget(fisrt, second)
     if cot == False:
         context = {
-        "valor" : cot[0][:4],
-        "high": cot[1],
-        "low": cot[2],
+        "valor" : "OPs, houve um erro nas moedas, tente outra combinação",
+        "cot" : False
         }
 
         return render(request, 'dola.html', context)
