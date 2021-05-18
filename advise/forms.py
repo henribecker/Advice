@@ -1,6 +1,4 @@
 from django import forms
-from django.forms.fields import ChoiceField
-from django.utils.regex_helper import Choice
 from .api import choice
 
 moedas = choice

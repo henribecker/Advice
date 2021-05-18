@@ -59,6 +59,7 @@ def dolar(request, fisrt, second):
 def choice_coin(request):
     context = {}
     context['form'] = MoedaForm()
+    
     if request.GET:
         temp = request.GET['coin_origin']
         temp1 = request.GET['coin_destiny']
