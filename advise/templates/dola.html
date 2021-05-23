@@ -31,11 +31,12 @@ Cotação
 <div class="cotacao">
     <span class="cotDolar">
         <span class="simbolo">US$</span>
-        <input type="text" class="real" value="1.00">
+        <input type="text" class="real" id="0" value="1.00">
     </span>
     <span class="cotDolar">
         <span class="simbolo">R$</span>
-        <input type="text" class="real1" value="{{ valor }}">
+        <input type="text" class="real" id="final"  value="{{ valor }}" readonly>
+        <input type="text" id="valor"  value="{{ valor }}">
     </span>
     <div class="submit">
         <a href="#" class="btn btnsubmit" >Converter</a>

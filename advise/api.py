@@ -13,7 +13,6 @@ def get():
 
 def dolarget(fisrt, second):
     obj = requests.get(f'https://economia.awesomeapi.com.br/last/{fisrt}-{second}')
-    print(obj.status_code)
     if obj.status_code != 200:
         return False
     else:
