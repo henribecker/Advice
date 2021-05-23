@@ -13,6 +13,7 @@ def get():
 
 def dolarget(fisrt, second):
     obj = requests.get(f'https://economia.awesomeapi.com.br/last/{fisrt}-{second}')
+    print(obj.status_code)
     if obj.status_code != 200:
         return False
     else:
@@ -23,11 +24,11 @@ def dolarget(fisrt, second):
             return a
 
 choice = (
-    ('AFN', 'Afghani do Afeganistão'),
-    ('MGA','Ariary Madagascarense'),
-    ('THB','Baht Tailandês'),
-    ('PAB','Balboa Panamenho'),
-    ('ETB', 'Birr Etíope'),
+    #('AFN', 'Afghani do Afeganistão'),
+    #('MGA','Ariary Madagascarense'),
+    #('THB','Baht Tailandês'),
+    #('PAB','Balboa Panamenho'),
+    #('ETB', 'Birr Etíope'),
     ('BTC', 'Bitcoin'),
     ('BOB', 'Boliviano'),
     ('VEF', 'Bolívar Venezuelano'),
@@ -75,16 +76,16 @@ choice = (
     ('HKD','Dólar de Hong Kong'),
     ('TTD','Dólar de Trinidad'),
     ('XCD','Dólar do Caribe Oriental'),
-    ('CVE','Escudo cabo-verdiano'),
+    #('CVE','Escudo cabo-verdiano'),
     ('ETH','Ethereum'),
     ('EUR','Euro'),
     ('HUF','Florim Húngaro'),
-    ('BIF','Franco Burundinense'),
-    ('XAF', 'Franco CFA Central'),
-    ('XOF','Franco CFA Ocidental'),
-    ('XPF','Franco CFP'),
-    ('KMF','Franco Comorense'),
-    ('RWF','Franco Ruandês'),
+    #('BIF','Franco Burundinense'),
+    #('XAF', 'Franco CFA Central'),
+    #('XOF','Franco CFA Ocidental'),
+    #('XPF','Franco CFP'),
+    #('KMF','Franco Comorense'),
+    #('RWF','Franco Ruandês'),
     ('CHF','Franco Suíço'),
     ('CHFRTS','Franco Suíço'),
     ('GNF','Franco de Guiné'),
@@ -94,7 +95,7 @@ choice = (
     ('ANG','Guilder das Antilhas'),
     ('UAH','Hryvinia Ucraniana'),
     ('JPY','Iene Japonês'),
-    ('JPYRTS','Iene Japonês'),
+    #('JPYRTS','Iene Japonês'),
     ('PGK','Kina Papua-Nova Guiné'),
     ('LAK','Kip Laosiano'),
     ('HRK','Kuna Croata'),

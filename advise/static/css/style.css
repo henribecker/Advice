@@ -72,13 +72,13 @@ header ul li a:hover {
 .content {
     width: 100%;
     margin: 0;
-    justify-content: center;
-    align-items: center;
+    
 }
 .content .textBox {
-    display: flex;
+    display: block;
     width: 90%;
-    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 .content .textBox h2 {
     color: #3d9eef;
@@ -86,6 +86,7 @@ header ul li a:hover {
     margin-bottom: 50px;
     line-height: 1.2em;
     font-weight: 700;
+    text-align: center;
 }
 .content .textBox p {
     font-size: 1.5em;
@@ -98,14 +99,15 @@ header ul li a:hover {
     display: inline-block;
     margin-top: 10px;
     padding: 15px 30px;
-    background-color: #ff5e8e;
-    color: #fff;
     font-size: 1.2em;
     border-radius: 40px;
     font-weight: 700;
     letter-spacing: 1px;
     text-decoration: none;
     margin-left: 180px;
+    background-color: #ff5e8e;
+    color: #fff;
+
 }
 .content .textBox a:hover {
     background-color: #3d9eef;
@@ -146,7 +148,7 @@ header ul li a:hover {
 }
 
 /* Responsividade do site */
-@media (max-width: 991px)
+@media (max-width: 820px)
 {
     section {
         padding: 100px 20px;
@@ -157,10 +159,12 @@ header ul li a:hover {
     header .logo {
         margin-left: 20px;
     }
-    .navigation {
-        margin-left: 50px;
+
+    .content{
+        padding-left: 0;
     }
     .content .textBox a {
+        display: block;
         margin-left: auto;
         margin-right: auto;
     }

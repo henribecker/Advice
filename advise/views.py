@@ -5,6 +5,7 @@ from .forms import MoedaForm
 
 def advice(request):
     call = api.get()
+    
     if call == False:
         advices = {
             "call": "SORRY! Indisponível no momento.",
@@ -56,7 +57,7 @@ def dolar(request, fisrt, second):
         return render(request, 'dola.html', context)
 
 
-def choice_coin(request):
+def coin_choice(request):
     context = {}
     context['form'] = MoedaForm()
     

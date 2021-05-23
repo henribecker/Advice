@@ -76,7 +76,7 @@ header ul li a:hover {
 }
 .content .textBox {
     position: relative;
-    max-width: 600px;
+    width: 100%;
     margin: 0;
 }
 .content .textBox h2 {
