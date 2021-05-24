@@ -19,11 +19,11 @@ Cotação
 
 {% block center %}
 {% if cot == False %}
-<div class="content">
-    <div class="textBox">
+<div class="f1">
+    <div class="s2">
         <h2>Ops! Algo errado aconteceu.</h2>
         <p class="adiver">{% block advice %} {{ valor }} {% endblock advice %}</p>
-        <a href="{% block url %} {% url 'Choice' %} {% endblock url %}">{% block btnName %}Voltar{% endblock btnName %}</a>
+        <a  class="ops" href="{% block url %} {% url 'Choice' %} {% endblock url %}">{% block btnName %}Voltar{% endblock btnName %}</a>
     </div>
 </div>
 
