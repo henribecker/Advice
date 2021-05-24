@@ -18,14 +18,34 @@ Cotação
 {% block menu %} Advice {% endblock menu %}
 
 {% block center %}
+{% if cot == False %}
+<div class="f1">
+    <div class="s2">
+        <h2>Ops! Algo errado aconteceu.</h2>
+        <p class="adiver">{% block advice %} {{ valor }} {% endblock advice %}</p>
+        <a  class="ops" href="{% block url %} {% url 'Choice' %} {% endblock url %}">{% block btnName %}Voltar{% endblock btnName %}</a>
+    </div>
+</div>
+
+{% else %}
 <div class="cotacao">
     <span class="cotDolar">
         <span class="simbolo">US$</span>
-        <input type="text" class="real" value="1.00">
+        <input type="text" class="real" id="0" value="1.00">
     </span>
     <span class="cotDolar">
         <span class="simbolo">R$</span>
-        <input type="text" class="real" value="{{ dolarhoje }}">
+        <input type="text" class="real" id="final"  value="{{ valor }}" readonly>
+        <input type="text" id="valor"  value="{{ valor }}">
     </span>
+    <div class="submit">
+        <a href="#" class="btn btnsubmit" >Converter</a>
+        <a href=" {% url 'Choice' %} " class="btn btnsubmit" >Mudar Moedas</a>
+    </div>
 </div>
+{% endif %}
 {% endblock center %}
+
+{% block script %}
+    <script src="{% static 'js/script.js' %}"></script>
+{% endblock script %}
