@@ -113,7 +113,7 @@ header ul li a:hover {
     color: #fff;
 }
 
-.sci {
+.sci, .sci ul {
     position: absolute;
     bottom: 40px;
     display: flex;
