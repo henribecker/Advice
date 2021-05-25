@@ -43,3 +43,16 @@ form input {
     font-size: 2em;
     color: #fff;
 }
+@media (max-width: 820px) {
+    body {
+        max-width: 100%;
+        overflow-x: hidden !important;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+    header ul {
+        display: flex;
+    }
+}
